@@ -18,8 +18,10 @@ function DarkMode({ api }) {
   const setMode = useCallback(() => {
     const changedState = !isDarkMode;
     setDarkMode(changedState);
-    api.setOptions({ themes: changedState ? themes.dark : themes.light });
+    console.log('before', api);
+    api.setOptions({ themes: themes.dark });
     api.getChannel().emit('DARK_MODE_VUE', changedState);
+    console.log('after', api);
   });
 
   useEffect(() => {
