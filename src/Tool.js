@@ -6,8 +6,9 @@ const { useState } = React;
 function DarkMode({ api }) {
   // inital state should always be false;
   const [isDarkMode, setDarkMode] = useState(false);
+  
   return (
-    <IconButton active={isDarkMode}>{isDarkMode ? 'DARK' : 'LIGHT'}</IconButton>
+    <IconButton active={isDarkMode} onClick={}>{isDarkMode ? 'DARK' : 'LIGHT'}</IconButton>
   );
 }
 
