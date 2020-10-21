@@ -1,0 +1,24 @@
+{
+  "name": "storybook-darkmode-vue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eddie0329/storybook-darkmode-vue.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eddie0329/storybook-darkmode-vue/issues"
+  },
+  "homepage": "https://github.com/eddie0329/storybook-darkmode-vue#readme",
+  "devDependencies": {
+    "@storybook/addons": "^6.0.26",
+    "@storybook/theming": "^6.0.26"
+  }
+}
