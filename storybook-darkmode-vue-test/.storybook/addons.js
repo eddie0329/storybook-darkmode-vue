@@ -1,1 +1,1 @@
-import '../../src/register.js';
+import '../../dist/register.js'
