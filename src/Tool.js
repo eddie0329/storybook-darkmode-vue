@@ -1,25 +1,25 @@
 import React from 'react';
 import { IconButton } from '@storybook/components';
-import { themes } from '@storybook/theming';
-import {
-  STORY_CHANGED,
-  SET_STORIES,
-  DOCS_RENDERED,
-} from '@storybook/core-events';
 import { ADDON_ID } from './constants';
 import Sun from './Sun';
 import Moon from './Moon';
+import Store from './Store';
 
-const { useState, useEffect, useCallback } = React;
+const { useState, useCallback, useEffect } = React;
 
 function Tool({ api }) {
   // inital state should always be false;
-  const [isDarkMode, setDarkMode] = useState(false);
+  const [isDarkMode, setDarkMode] = useState(Store.getIsDarkMode());
+
+  const renderTheme = useCallback((mode) => {
+    api.setOptions({ theme: Store.getThemes()[mode] });
+    api.getChannel().emit(ADDON_ID, mode);
+  });
 
   const setMode = useCallback((mode) => {
     setDarkMode(mode);
-    api.setOptions({ theme: mode ? themes.dark : themes.light });
-    api.getChannel().emit(ADDON_ID, mode);
+    Store.setIsDarkMode(mode);
+    renderTheme(mode);
   });
 
   const invertMode = useCallback(() => {
@@ -27,16 +27,9 @@ function Tool({ api }) {
     setMode(changedState);
   });
 
+  // when app is created
   useEffect(() => {
-    const channel = api.getChannel();
-    // channel.on(STORY_CHANGED, setMode(isDarkMode));
-    // channel.on(SET_STORIES, setMode(isDarkMode));
-    // channel.on(DOCS_RENDERED, setMode(isDarkMode));
-    return () => {
-      // channel.removeListener(STORY_CHANGED, setMode(isDarkMode));
-      // channel.removeListener(SET_STORIES, setMode(isDarkMode));
-      // channel.removeListener(DOCS_RENDERED, setMode(isDarkMode));
-    };
+    renderTheme(isDarkMode);
   });
 
   return (

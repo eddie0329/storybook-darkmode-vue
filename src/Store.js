@@ -1,32 +1,34 @@
 import { themes } from '@storybook/theming';
+import { ADDON_ID, DARK, LIGHT } from './constants';
 
 class Store {
-  constructor() {
-    this.isDarkMode = false;
-    this.themes = themes.dark;
+  constructor(mode) {
+    this.isDarkMode = mode;
+    this.themes = { [DARK]: themes.dark, [LIGHT]: themes.light };
     return this;
   }
   getIsDarkMode() {
     return this.isDarkMode;
   }
-  getTheme() {
+  getThemes() {
     return this.themes;
   }
-  setIsDarkMode(bool) {
-    this.isDarkMode = bool;
-    if (bool) {
-      this.themes = themes.dark;
-    } else {
-      this.themes = themes.light;
-    }
+  setIsDarkMode(mode) {
+    this.isDarkMode = mode;
+    window.localStorage.setItem(ADDON_ID, mode);
     return this;
   }
 }
 
 const storeSingleton = (() => {
   let instance = null;
+  let localStorageIsDark = JSON.parse(window.localStorage.getItem(ADDON_ID));
   const initiate = () => {
-    instance = new Store();
+    if (localStorageIsDark === null) {
+      localStorageIsDark = false;
+      window.localStorage.setItem(ADDON_ID, false);
+    }
+    instance = new Store(localStorageIsDark);
   };
   return {
     getInstance: () => {
