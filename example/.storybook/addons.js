@@ -1,1 +1,1 @@
-import 'storybook-darkmode-vue/register';
+import '../../register';

@@ -6,7 +6,6 @@
 
 <script>
 import { addons } from '@storybook/addons';
-import { ADDON_ID } from './constants';
 
 const channel = addons.getChannel();
 
@@ -16,12 +15,12 @@ export default {
     isDarkMode: false,
   }),
   created() {
-    channel.on(ADDON_ID, (mode) => {
+    channel.on('STORYBOOK_DARK_MODE_VUE', (mode) => {
       this.isDarkMode = mode;
     });
   },
   beforeDestroy() {
-    channel.off(ADDON_ID, () => {});
+    channel.off('STORYBOOK_DARK_MODE_VUE', () => {});
   },
 };
 </script>

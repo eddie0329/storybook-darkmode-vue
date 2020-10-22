@@ -1,17 +1,1 @@
-// .storybook/my-addon/register.js
-import React from 'react';
-import { addons, types } from '@storybook/addons';
-import Tool from './src/Tool';
-import { ADDON_ID, PANEL_ID } from './src/constants';
-
-// addons.setConfig({
-//   theme: themes.light,
-// });
-
-addons.register(ADDON_ID, (api) => {
-  addons.add(PANEL_ID, {
-    title: 'dark mode vue',
-    type: types.TOOL,
-    render: () => <Tool api={api} />,
-  });
-});
+import './dist/register';

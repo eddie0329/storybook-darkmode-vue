@@ -1,4 +1,3 @@
-import { Button } from '@storybook/components';
 import React from 'react';
 
 function Sun() {

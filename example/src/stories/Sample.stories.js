@@ -1,5 +1,5 @@
 import { storiesOf } from '@storybook/vue';
-import DarkModeWrapper from '../../../src/DarkModeWrapper';
+import DarkModeWrapper from 'storybook-darkmode-vue/DarkModeWrapper';
 import DarkModeSample from './DarkModeSample';
 
 storiesOf('Sample', module).add('sample1', () => ({

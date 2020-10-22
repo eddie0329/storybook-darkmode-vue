@@ -5,10 +5,8 @@ import Sun from './Sun';
 import Moon from './Moon';
 import Store from './Store';
 
-const { useState, useCallback, useEffect } = React;
-
 function Tool({ api }) {
-  // inital state should always be false;
+  const { useState, useCallback, useEffect } = React;
   const [isDarkMode, setDarkMode] = useState(Store.getIsDarkMode());
 
   const renderTheme = useCallback((mode) => {
@@ -27,7 +25,6 @@ function Tool({ api }) {
     setMode(changedState);
   });
 
-  // when app is created
   useEffect(() => {
     renderTheme(isDarkMode);
   });
