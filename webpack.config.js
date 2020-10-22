@@ -1,15 +1,15 @@
 const path = require('path');
+const webpack = require('webpack');
+
 
 module.exports = {
+  mode: 'development',
   resolve: {
     extensions: ['.js'],
   },
   entry: {
     app: path.join(__dirname, '/src/register.js')
   },
-  // externals: {
-  //   react: './node_modules/@storybook/api/node_modules/react'
-  // },
   module: {
     rules: [
       {
@@ -22,5 +22,5 @@ module.exports = {
   output: {
     filename: 'register.js',
     path: path.join(__dirname, 'dist')
-  }
+  },
 }
