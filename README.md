@@ -1,5 +1,12 @@
 # Storybook Darkmode in Vue
 
+## ➕ Install
+
+```shell
+npm i storybook-darkmode-vue -D
+yarn add storybook-darkmode-vue -D
+```
+
 ## 🎉 Objective
 
 Develop Vue application that provides `darkmode` with Storybook. 
