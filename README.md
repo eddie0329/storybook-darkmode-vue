@@ -72,3 +72,7 @@ Need to register as following:
 // addons.js
 import 'storybook-darkmode-vue/register'
 ```
+
+## 🙇 Contribution
+
+See `CONTRIBUTING.md`.
