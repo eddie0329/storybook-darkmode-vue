@@ -1,8 +1,8 @@
 {
   "name": "storybook-darkmode-vue",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Storybook addons supporting darkmode in vue app",
-  "main": "src/register.js",
+  "main": "register.js",
   "scripts": {},
   "repository": {
     "type": "git",
@@ -16,7 +16,6 @@
   "author": {
     "name": "Eddie Sunny"
   },
-  "files": ["src"],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/eddie0329/storybook-darkmode-vue/issues"

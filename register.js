@@ -1,8 +1,8 @@
 // .storybook/my-addon/register.js
 import React from 'react';
 import { addons, types } from '@storybook/addons';
-import Tool from './Tool';
-import { ADDON_ID, PANEL_ID } from './constants';
+import Tool from './src/Tool';
+import { ADDON_ID, PANEL_ID } from './src/constants';
 
 // addons.setConfig({
 //   theme: themes.light,
