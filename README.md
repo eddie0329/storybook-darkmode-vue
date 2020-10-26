@@ -4,6 +4,7 @@
 [![MIT License](https://img.shields.io/npm/l/jest-to-be-typed.svg?style=flat-square)](https://github.com/eddie0329/storybook-darkmode-vue/blob/master/LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 [![downloads](https://img.shields.io/npm/dm/storybook-darkmode-vue.svg?style=flat-square)](http://npm-stat.com/charts.html?package=storybook-darkmode-vue&from=2020-10-20)
+[![Examples](https://img.shields.io/badge/%F0%9F%92%A1-examples-ff615b.svg?style=flat-square)](https://github.com/eddie0329/storybook-darkmode-vue/example)
 
 ## ➕ Install
 
