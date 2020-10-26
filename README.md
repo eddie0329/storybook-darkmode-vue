@@ -1,6 +1,6 @@
 # Storybook Darkmode in Vue 🌙
 
-[![version](https://img.shields.io/npm/v/storybook-darkmode-be-vue.svg?style=flat-square)](https://www.npmjs.com/package/storybook-darkmode-vue)
+[![version](https://img.shields.io/npm/v/storybook-darkmode-vue.svg?style=flat-square)](https://www.npmjs.com/package/storybook-darkmode-vue)
 [![MIT License](https://img.shields.io/npm/l/jest-to-be-typed.svg?style=flat-square)](https://github.com/eddie0329/storybook-darkmode-vue/blob/master/LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
