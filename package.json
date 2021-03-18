@@ -14,7 +14,9 @@
   "keywords": [
     "storybook darkmode",
     "storybook darkmode for vue",
-    "storybook darkmode vue"
+    "storybook darkmode vue",
+    "storybook-addon",
+    "style"
   ],
   "author": {
     "name": "Eddie Sunny"
