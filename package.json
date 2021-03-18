@@ -1,6 +1,6 @@
 {
   "name": "storybook-darkmode-vue",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "description": "Storybook addons supporting darkmode in vue app",
   "main": "register.js",
   "scripts": {
